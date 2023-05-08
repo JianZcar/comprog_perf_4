@@ -13,9 +13,8 @@ def input_number(max_n: int) -> int:
             print("Invalid input. Try again.")
 
 
-def menu(items: dict) -> tuple:
+def main(items: dict, **kwargs) -> dict:
     """displays the menu"""
     [print(f"{index + 1}. {item}") for index, item in enumerate(items.keys())]
     input_option = input_number(len(items))
-    item = items[list(items.keys())[input_option - 1]]()
-    return item
+    return items[list(items.keys())[input_option - 1]]()
