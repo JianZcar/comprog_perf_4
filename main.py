@@ -23,8 +23,7 @@ def main() -> None:
                   "Exit": lambda: exit_program(temp_file_name)}
 
     temp_ = ui.main(menu_items)
-    if temp_ is not None:
-        fh.main(temp_, temp_file_name)
+    fh.main(temp_, temp_file_name) if temp_ is not None else None
     print("\n")
     main()
 

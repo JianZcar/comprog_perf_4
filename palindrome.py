@@ -8,8 +8,11 @@ def main() -> dict:
     string_ = input("> ")
     a_palindrome = palindrome(string_)
     last_3 = last_three(string_)
-    (lambda: [print("Is palindrome?", a_palindrome), print("Last three characters:", last_3)])()
-    return {"Input: ": string_, "Is palindrome? ": a_palindrome, "Last three characters: ": last_3}
+    print("Is palindrome?", a_palindrome)
+    print("Last three characters:", last_3)
+    return {"Input: ": string_,
+            "Is palindrome? ": a_palindrome,
+            "Last three characters: ": last_3}
 
 
 def palindrome(n: str) -> bool:

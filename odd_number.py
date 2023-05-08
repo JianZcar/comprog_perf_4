@@ -11,8 +11,8 @@ def main() -> dict:
             if input_number < 0:
                 raise ValueError
             odds = total_odd(input_number)
-            (lambda: [print("Odd numbers:", odds[1]),
-                      print("Total:", odds[0])])()
+            print("Odd numbers:", odds[1])
+            print("Total:", odds[0])
             return {"Input: ": input_number,
                     "Odd numbers: ": odds[1],
                     "Total: ": odds[0]}
