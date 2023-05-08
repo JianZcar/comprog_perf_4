@@ -22,7 +22,7 @@ def main() -> None:
                   "Delete Save": lambda: fh.delete_save(file_name),
                   "Exit": lambda: exit_program(temp_file_name)}
 
-    temp_ = ui.main(menu_items, file_name=file_name)
+    temp_ = ui.main(menu_items)
     if temp_ is not None:
         fh.main(temp_, temp_file_name)
     print("\n")
