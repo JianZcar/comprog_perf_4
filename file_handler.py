@@ -33,18 +33,6 @@ def input_number(max_n: int) -> int:
             print("Invalid input. Try again.")
 
 
-def is_to_save() -> bool:
-    """asks if the user wants to save the data"""
-    while True:
-        answer = input("Do you want to save the data? (y/n): ")
-        if answer.lower() == "y":
-            return True
-        elif answer.lower() == "n":
-            return False
-        else:
-            print("Invalid input!")
-
-
 def main(data: dict, file_name: str) -> None:
     """main function"""
     write(file_name, data)
@@ -87,7 +75,7 @@ def temp_file_handler(temp_file_name: str, file_name: str) -> None:
             main(i, file_name)
         else:
             temp_data.write([])
-        print("Data saved")
+            print("Data saved")
     else:
         print("No data to save")
 
